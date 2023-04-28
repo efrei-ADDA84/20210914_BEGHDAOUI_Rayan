@@ -1,0 +1,23 @@
+name: publishDockerImage
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+   buildPushImage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+    - name: Build the Docker image
+      run: docker build . -t rayanbgd/tp1devops:tagname
+    - name: Push the Docker image
+      run: docker push rayanbgd/tp1devops:tagname
+
+

@@ -35,4 +35,4 @@ jobs:
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: 20210914
           location: 'france south'
-          secure_environment_variable: API_KEY=${{ secrets.API_KEY }}
+          secure-environment-variable: API_KEY=${{ secrets.API_KEY }}

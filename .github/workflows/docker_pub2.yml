@@ -35,3 +35,4 @@ jobs:
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           name: 20210914
           location: 'france central'
+          # pour repush

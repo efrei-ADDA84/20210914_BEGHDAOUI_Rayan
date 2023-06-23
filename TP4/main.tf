@@ -58,7 +58,6 @@ resource "azurerm_public_ip" "rayanb" {
   location            = "francecentral"
   resource_group_name = "ADDA84-CTP"
   allocation_method   = "Static"
-  sku                 = "Standard"
 }
 
 # Network Interface
